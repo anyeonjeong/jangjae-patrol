@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장재 자율 방범대 | 함께하는 우리동네 안전</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pretendard 폰트 (깔끔한 기업형 고딕) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- FontAwesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 58, 138, 0.88) 100%),
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- 상단 네비게이션 바 -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- 로고 및 타이틀 -->
+                <a href="#" class="flex items-center space-x-3">
+                    <!-- 로고 이미지 파일명을 logo.png로 맞춰주세요 -->
+                    <img src="logo.png" alt="장재 자율 방범대 로고" class="w-12 h-12 rounded-full object-cover shadow-sm bg-white" onerror="this.src='https://via.placeholder.com/48/1e3a8a/ffffff?text=COP'">
+                    <div>
+                        <span class="block text-xs font-bold tracking-wider text-blue-700 uppercase">Korea Citizens On Patrol</span>
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight">장재 자율 방범대</span>
+                    </div>
+                </a>
+
+                <!-- PC 메뉴 -->
+                <nav class="hidden md:flex items-center space-x-8 font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-blue-700 transition">방범대 소개</a>
+                    <a href="#activities" class="hover:text-blue-700 transition">주요 활동</a>
+                    <a href="#gallery" class="hover:text-blue-700 transition">활동 갤러리</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition shadow-sm">
+                        대원 가입·문의
+                    </a>
+                </nav>
+
+                <!-- 모바일 메뉴 버튼 -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 모바일 드롭다운 메뉴 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-lg">
+            <a href="#about" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700">방범대 소개</a>
+            <a href="#activities" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700">주요 활동</a>
+            <a href="#gallery" class="block px-3 py-2.5 rounded-lg font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700">활동 갤러리</a>
+            <a href="#contact" class="block px-3 py-3 mt-2 text-center rounded-lg font-bold bg-blue-700 text-white">대원 가입·문의</a>
+        </div>
+    </header>
+
+    <!-- 메인 히어로 배너 -->
+    <section class="hero-bg pt-36 pb-24 md:pt-44 md:pb-32 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-3/5 text-center md:text-left">
+                <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-shield-halved mr-2 text-amber-400"></i> 아산시 배방읍 장재리 안전 지킴이
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+                    함께하는 우리동네 안전!<br>
+                    <span class="text-amber-400">장재 자율 방범대</span>와 함께
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200 leading-relaxed mb-10 max-w-2xl">
+                    우리 이웃의 평온한 일상과 안전한 밤거리를 위해 지역 주민들이 자발적으로 모여 봉사하고 순찰하는 지역 안전 파수꾼입니다.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold rounded-xl text-lg transition shadow-lg text-center">
+                        <i class="fa-solid fa-user-plus mr-2"></i>방범대원 지원하기
+                    </a>
+                    <a href="#activities" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded-xl text-lg transition text-center">
+                        주요 활동 살펴보기
+                    </a>
+                </div>
+            </div>
+
+            <!-- 우측 엠블럼 강조 카드 -->
+            <div class="md:w-2/5 flex justify-center">
+                <div class="relative p-6 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl">
+                    <img src="logo.png" alt="장재 자율 방범대 공식 엠블럼" class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover shadow-xl bg-white p-1" onerror="this.src='https://via.placeholder.com/250/1e3a8a/ffffff?text=EMBLEM'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 방범대 소개 섹션 -->
+    <section id="about" class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-700 font-bold tracking-wider uppercase text-sm">About Us</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">내 고장은 내가 지킨다</h2>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    장재 자율 방범대는 배방읍 장재리 일대의 범죄 예방과 청소년 선도, 지역 사회 봉사를 통해 주민 모두가 안심하고 살 수 있는 마을을 만들어 갑니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">촘촘한 야간 방범 순찰</h3>
+                    <p class="text-slate-600 leading-relaxed">범죄 취약 구역, 공원, 어두운 골목길을 주기적으로 순찰하여 범죄 심리를 사전에 차단합니다.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 mx-auto bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">청소년 선도 및 귀가 지원</h3>
+                    <p class="text-slate-600 leading-relaxed">늦은 시간 귀가하는 학생과 주민들의 안전한 발걸음을 돕고 건강한 지역 문화를 조성합니다.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 mx-auto bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">지역 사회 나눔 및 봉사</h3>
+                    <p class="text-slate-600 leading-relaxed">마을 행사 안전 질서 유지, 어르신 나눔 봉사, 환경 정화 등 따뜻한 공동체 활동을 실천합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 활동 안내 -->
+    <section id="activities" class="py-20 md:py-28 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-14">
+                <div>
+                    <span class="text-blue-700 font-bold tracking-wider uppercase text-sm">Activities</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">주요 순찰 및 봉사 영역</h2>
+                </div>
+                <p class="text-slate-500 mt-3 md:mt-0">경찰 지구대와 긴밀히 협력하여 체계적인 활동을 펼칩니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex items-start space-x-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-700 text-white flex items-center justify-center font-bold text-lg">01</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">정기 야간 도보 및 차량 순찰</h3>
+                        <p class="text-slate-600 leading-relaxed">매주 정해진 요일 야간 시간대에 상가 밀집 지역, 원룸촌, 학교 주변 등 취약 지구를 집중 순찰합니다.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex items-start space-x-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-700 text-white flex items-center justify-center font-bold text-lg">02</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">민·경 합동 특별 방범 활동</h3>
+                        <p class="text-slate-600 leading-relaxed">명절 연휴, 휴가철, 연말연시 등 치안 수요가 높아지는 시기에 관할 지구대와 합동 순찰을 진행합니다.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex items-start space-x-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-700 text-white flex items-center justify-center font-bold text-lg">03</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">지역 축제 및 행사 교통·안전 지원</h3>
+                        <p class="text-slate-600 leading-relaxed">지역 주민 체육대회, 마을 축제 등 다중 인파가 모이는 행사에서 원활한 교통 통제와 안전 사고 예방을 지원합니다.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex items-start space-x-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-700 text-white flex items-center justify-center font-bold text-lg">04</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">이웃 사랑 나눔 및 재능 기부</h3>
+                        <p class="text-slate-600 leading-relaxed">독거 어르신 돌봄 물품 전달, 청소년 봉사 프로그램 운영 등 더불어 살아가는 지역 공동체를 만듭니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 활동 갤러리 (사진 넣는 공간) -->
+    <section id="gallery" class="py-20 md:py-28 bg-white border-t border-slate-200/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-700 font-bold tracking-wider uppercase text-sm">Gallery</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">생생한 활동 현장</h2>
+                <p class="text-slate-600">장재 자율 방범대원들의 땀방울과 열정이 담긴 활동 기록입니다.</p>
+            </div>
+
+            <!-- 추후 실제 활동 사진 파일 경로(src)만 교체하시면 됩니다 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 카드 1 -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="aspect-w-16 aspect-h-11 bg-slate-200 overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=80" alt="야간 방범 순찰" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">방범 순찰</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-1">장재리 일원 야간 정기 순찰</h3>
+                        <p class="text-sm text-slate-500">취약 지역 및 공원 주변 안전 점검 활동</p>
+                    </div>
+                </div>
+
+                <!-- 카드 2 -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="aspect-w-16 aspect-h-11 bg-slate-200 overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800&q=80" alt="지역 봉사 활동" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">나눔 봉사</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-1">어르신 안전 및 나눔 봉사</h3>
+                        <p class="text-sm text-slate-500">지역 어르신들을 위한 따뜻한 마음 전달</p>
+                    </div>
+                </div>
+
+                <!-- 카드 3 -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="aspect-w-16 aspect-h-11 bg-slate-200 overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="청소년 선도 캠페인" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">캠페인</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-3 mb-1">청소년 보호 및 안전 캠페인</h3>
+                        <p class="text-sm text-slate-500">우리 아이들이 안전한 등하굣길 조성</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 대원 모집 및 문의 안내 (CTA & Contact) -->
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">우리 동네를 지키는 든든한 대원이 되어주세요!</h2>
+            <p class="text-blue-200 text-lg mb-10 max-w-2xl mx-auto">
+                장재리에 거주하거나 근무하시는 성인 남녀 누구나 지원 가능합니다. 함께 땀 흘리며 보람찬 봉사를 이어갈 신입 대원을 상시 모집합니다.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/15">
+                    <div class="text-amber-400 text-sm font-bold mb-1">초소 위치 안내</div>
+                    <div class="text-lg font-bold mb-2">충청남도 아산시 배방읍 장재리 일원</div>
+                    <p class="text-sm text-blue-200">자세한 방문 상담은 사전 연락 후 초소로 방문해 주세요.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/15 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-400 text-sm font-bold mb-1">가입 및 활동 문의</div>
+                        <div class="text-lg font-bold mb-3">010-0000-0000 (사무국장)</div>
+                    </div>
+                    <!-- 모바일에서 누르면 바로 전화 연결 -->
+                    <a href="tel:010-0000-0000" class="inline-flex items-center justify-center w-full py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold rounded-xl transition">
+                        <i class="fa-solid fa-phone mr-2"></i>전화 문의하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="로고" class="w-9 h-9 rounded-full bg-white" onerror="this.style.display='none'">
+                <span class="text-white font-bold text-lg">장재 자율 방범대</span>
+            </div>
+            <div class="text-sm text-center md:text-right">
+                <p>충청남도 아산시 배방읍 장재리 | Korea Citizens On Patrol</p>
+                <p class="mt-1 text-slate-500">&copy; 2026 장재 자율 방범대. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모바일 메뉴 토글 스크립트 -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        // 모바일 메뉴 항목 클릭 시 자동 닫힘
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
